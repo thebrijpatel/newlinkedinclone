@@ -10,7 +10,6 @@ import { BusinessCenter, Chat, Notifications } from '@material-ui/icons';
 
 const Header = () => {
     return (
-        <div>
             <div className='header'>
                 <div class="header__left">
                     <img src='https://www.flaticon.com/svg/static/icons/svg/174/174857.svg' alt=''/>
@@ -50,7 +49,6 @@ const Header = () => {
                     />
                 </div>         
             </div>
-        </div>
     )
 }
 
