@@ -8,6 +8,7 @@ import { CalendarViewDay, EventNote, Subscriptions } from '@material-ui/icons';
 import Post from '../Post/Post';
 import {db} from '../../config/firebase';
 
+
 import firebase from 'firebase';
 
 const Feed = () => {
@@ -56,15 +57,15 @@ const Feed = () => {
 
     return (
         <div className='feed'>
-            <div class="feed__inputContainer">
-                <div class="feed__input">
+            <div className="feed__inputContainer">
+                <div className="feed__input">
                     <CreateIcon />
                     <form>
                         <input value={input} onChange={e => setInput(e.target.value)} type="text" />
                         <button onClick={sendPost} type='submit'>Send</button>
                     </form>
                 </div>
-                <div class="feed__inputOptions">
+                <div className="feed__inputOptions">
                     <InputOption 
                         Icon={ImageIcon}
                         title='Photo'

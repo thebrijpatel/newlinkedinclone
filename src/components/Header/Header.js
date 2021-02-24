@@ -11,10 +11,10 @@ import { BusinessCenter, Chat, Notifications } from '@material-ui/icons';
 const Header = () => {
     return (
             <div className='header'>
-                <div class="header__left">
+                <div className="header__left">
                     <img src='https://www.flaticon.com/svg/static/icons/svg/174/174857.svg' alt=''/>
                     
-                    <div class="header__search">
+                    <div className="header__search">
                         {/* SearchIcon */}
                         <SearchIcon />
                         <input type='text'/>
@@ -22,7 +22,7 @@ const Header = () => {
                 
                 </div>
 
-                <div class="header__right">
+                <div className="header__right">
                     <HeaderOption 
                         Icon={HomeIcon}
                         title='Home'
