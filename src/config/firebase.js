@@ -4,7 +4,7 @@ require('dotenv').config()
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 console.log(process.env.REACT_APP_apiKey)
 const firebaseConfig = {
-  apiKey: 'process.env.REACT_APP_apiKey',
+  apiKey: 'AIzaSyD0fCz6jo0ktpWwQ6IwzE-WsF4woEO4jaE',
   authDomain: process.env.REACT_APP_authDomain,
   projectId: "newlinkedinclone",
   storageBucket: process.env.REACT_APP_storageBucket,

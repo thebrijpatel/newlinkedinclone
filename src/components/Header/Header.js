@@ -7,8 +7,21 @@ import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 
 import HeaderOption from '../HeaderOption/HeaderOption';
 import { BusinessCenter, Chat, Notifications } from '@material-ui/icons';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout, selectUser } from '../../features/userSlice';
+import { auth } from '../../config/firebase';
 
 const Header = () => {
+
+    // const user = useSelector(selectUser);
+
+    const dispatch = useDispatch();
+
+    const logOutOfApp = () => {
+        dispatch(logout());
+        auth.signOut();
+    }
+
     return (
             <div className='header'>
                 <div className="header__left">
@@ -44,8 +57,9 @@ const Header = () => {
                         title='Notifications'
                     />
                     <HeaderOption 
-                        avatar='https://en.gravatar.com/userimage/201947661/82c56a4fc5a44b6bb7698007ea176c56.jpg'
+                        avatar
                         title='Me'
+                        onClick={logOutOfApp}
                     />
                 </div>         
             </div>

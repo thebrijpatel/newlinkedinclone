@@ -13,6 +13,7 @@ const Login = () => {
 
     const dispatch = useDispatch();
 
+
     const register = () => {
         if (!name) {
             return alert('Please enter name');
@@ -33,35 +34,20 @@ const Login = () => {
                 })
             }).catch(error => alert(error.message));
 
-        // auth.createUserWithEmailAndPassword(email, password)
-        //     .catch(e => {
-        //         var errorCode = e.code;
-        //         var errorMessage = e.message
-
-        //         if (errorCode == 'auth/weak-password') {
-        //             alert('Password weak')
-        //         }
-        //         else {
-        //             alert(e);
-        //         }
-        //     })
-        // var user = auth.currentUser;
-        // user.updateProfile({
-        //     displayName: name,
-        //     photoURL: profilePic
-        // }).then(() => {
-        //     dispatch(login({
-        //         email: user.user.email,
-        //         uid: user.user.uid,
-        //         displayName: name,
-        //         photoURL: profilePic
-        //     }))
-        // })
     };
 
     const loginToApp = (e) => {
         e.preventDefault();
-
+        auth.signInWithEmailAndPassword(email, password)
+        .then((userAuth) => {
+            dispatch(login({
+                email: userAuth.user.email,
+                uid: userAuth.user.uid,
+                displayName: userAuth.user.displayName,
+                profileUrl: userAuth.user.photoURL
+            }))
+        })
+        .catch(e => alert(e));
     };
     return (
         <div className='login'>
