@@ -6,11 +6,11 @@ import { FiberManualRecord } from '@material-ui/icons';
 const Widgets = () => {
 
     const newsArticle = (heading, subtitle) => (
-        <div class="widgets__article">
-            <div class="widgets__articleLeft">
+        <div className="widgets__article">
+            <div className="widgets__articleLeft">
                 <FiberManualRecord />
             </div>
-            <div class="widgets__articleRight">
+            <div className="widgets__articleRight">
                 <h4>{heading}</h4>
                 <p>{subtitle}</p>
             </div>
@@ -19,7 +19,7 @@ const Widgets = () => {
 
     return (
         <div className='widgets'>
-            <div class="widgets__header">
+            <div className="widgets__header">
                 <h2>LinkedIn News</h2>
                 <InfoIcon />
             </div>
